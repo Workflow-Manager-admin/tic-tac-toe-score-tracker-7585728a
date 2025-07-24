@@ -1,0 +1,58 @@
+.game-board-container {
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 1.7rem 1rem;
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(32, 59, 123, 0.06);
+}
+
+.game-status {
+  margin-bottom: 1.05rem;
+  font-size: 1.1rem;
+  color: var(--primary, #1976d2);
+  letter-spacing: 0.3px;
+  text-align: center;
+  min-height: 1.7rem;
+}
+.game-status .winner {
+  color: var(--accent, #ffeb3b);
+  text-shadow: 0 1px 2px var(--primary, #1976d2);
+}
+.game-status .draw {
+  color: var(--secondary, #424242);
+  font-weight: 600;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 8px;
+}
+
+.cell-btn {
+  width: 70px;
+  height: 70px;
+  font-size: 2.1rem;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+  background: var(--bg-primary, #fff);
+  color: var(--secondary, #424242);
+  border: 2px solid var(--border-color, #e9ecef);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+}
+
+.cell-btn:active,
+.cell-btn:focus {
+  border: 2px solid var(--primary, #1976d2);
+}
+
+.cell-btn[disabled] {
+  color: var(--primary, #1976d2);
+  background: #e7f0fa;
+  cursor: not-allowed;
+}
